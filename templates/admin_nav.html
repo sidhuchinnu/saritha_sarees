@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Navbar</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6fb;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #c2185b, #ff4081);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+
+        /* Hover background */
+        nav a:hover {
+            background: rgba(194, 24, 91, 0.1);
+            color: #c2185b;
+        }
+
+        /* Underline animation */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 50%;
+            bottom: 0;
+            background: #c2185b;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 70%;
+        }
+
+        /* Logout special button */
+        nav a.logout {
+            background: #c2185b;
+            color: #fff;
+        }
+
+        nav a.logout:hover {
+            background: #a0144a;
+            color: #fff;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SARITHA SAREES</div>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="{% url 'stock' %}">Add Product</a>
+        <a href="{% url 'all_users' %}">View Users</a>
+        <a href="{% url 'contact' %}">Orders</a>
+        <a href="{% url 'login' %}">Analytics</a>
+        <a href="/" class="logout">Logout</a>
+    </nav>
+</header>
+
+</body>
+</html>

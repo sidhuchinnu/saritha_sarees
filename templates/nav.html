@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+  background: white;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c2185b;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #c2185b;
+}
+    </style>
+</head>
+<body>
+    <header>
+  
+  <div class="logo">SARITHA SAREES</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="{% url 'stock' %}">Collections</a>
+    <a href="{% url 'aboutus' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+  </nav>
+</header>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+        border: 3px solid #f1f1f1;
+        width: 300px;
+        padding: 10px;
+        }   
+        input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        }
+        h1{
+        color: #c2185b;
+        }
+        button {
+        background-color: #c2185b; 
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        }
+        </style>
+</head>
+<body>
+
+<center>
+    <h1> Admin Login Page</h1>
+    <form method="POST" action="{% url 'admin_login_auth' %}">
+        {% csrf_token %}
+        <label for="email">Username:</label>
+        <input type="text" id="email" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+
+    </form>
+</center>
+</body>
+</html>

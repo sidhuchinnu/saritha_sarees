@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+        border: 3px solid #f1f1f1;
+        width: 300px;
+        padding: 10px;
+        }   
+        input[type=text], input[type=password], input[type=email], input[type=file] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        }
+        h1{
+        color: #c2185b;
+        }
+        input[type=submit] {
+        background-color: #c2185b; 
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        }
+    
+
+
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+  
+    <br><br>
+
+    <center>
+    <h1>Register Here</h1>
+    <form action="{% url 'add_user' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+         <label for="profile">Profile:</label><br>
+        <input type="file" id="profile" name="profile" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+    <div style="color:green;">
+        {% if message %}
+           <script>
+            alert("{{ message }}");
+           </script>
+        {% endif %}
+    </center>
+{% include 'futter.html' %}
+</body>
+</html>

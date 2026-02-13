@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saritha Sarees - Collections</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fff5f7;
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c2185b;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #c2185b;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  padding: 40px;
+}
+
+.page-title h1 {
+  color: #c2185b;
+  font-size: 40px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+  padding: 0 60px 60px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: #c2185b;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #444;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background: #c2185b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+{% include 'nav.html' %}
+
+<div class="page-title">
+  <h1>Our Exclusive Collections</h1>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Kanchipuram Silk</h3>
+      <div class="price">₹4,999</div>
+      <p>Rich traditional silk saree perfect for weddings.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Banarasi Silk</h3>
+      <div class="price">₹6,499</div>
+      <p>Elegant golden zari work with royal look.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1542060748-10c28b62716c?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Chiffon Saree</h3>
+      <div class="price">₹2,199</div>
+      <p>Lightweight and stylish for parties.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Cotton Saree</h3>
+      <div class="price">₹1,499</div>
+      <p>Comfortable everyday wear.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1520975922203-bdcb5a59d65f?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Georgette Saree</h3>
+      <div class="price">₹2,799</div>
+      <p>Trendy modern drape for special events.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Bridal Designer</h3>
+      <div class="price">₹9,999</div>
+      <p>Heavy embroidery for grand weddings.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1598514982181-8c7d6f7f2d59?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Linen Saree</h3>
+      <div class="price">₹2,499</div>
+      <p>Soft and classy office wear.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606813902914-01f67ca8c9b4?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Net Saree</h3>
+      <div class="price">₹3,299</div>
+      <p>Stylish look with modern designs.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Handloom Saree</h3>
+      <div class="price">₹3,999</div>
+      <p>Traditional craftsmanship and quality.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Party Wear Saree</h3>
+      <div class="price">₹3,499</div>
+      <p>Perfect for celebrations and functions.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Saritha Sarees | Premium Indian Fashion</p>
+</footer>
+
+</body>
+</html>

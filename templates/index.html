@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saritha Sarees</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fff5f7;
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c2185b;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #c2185b;
+}
+
+/* Banner Slider */
+.slider {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {margin-left: 0;}
+  33% {margin-left: -100%;}
+  66% {margin-left: -200%;}
+}
+
+/* Hero Text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  padding: 60px;
+  text-align: center;
+}
+
+section h2 {
+  color: #c2185b;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  color: #555;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #c2185b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  
+  <div class="logo">SARITHA SAREES</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="{% url 'stock' %}">Collections</a>
+    <a href="{% url 'aboutus' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+  </nav>
+</header>
+
+<!-- Slider -->
+<div class="slider">
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
+    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1">
+    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013">
+  </div>
+
+  <div class="hero-text">
+    <h1>Elegance in Every Drape</h1>
+    <p>Premium Silk | Cotton | Designer Sarees</p>
+  </div>
+</div>
+
+<section>
+  <h2>About Saritha Sarees</h2>
+  <p>
+    Saritha Sarees is your one-stop destination for timeless Indian fashion.
+    We bring you handpicked collections of pure silk sarees, soft cotton drapes,
+    bridal wear, and trendy designer sarees. Our goal is to make every woman feel
+    beautiful, confident, and graceful on every occasion.
+  </p>
+</section>
+
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="features">
+    <div class="box">
+      <h3>Premium Quality</h3>
+      <p>We source only the finest fabrics from trusted weavers.</p>
+    </div>
+    <div class="box">
+      <h3>Affordable Pricing</h3>
+      <p>Luxury sarees at prices everyone can afford.</p>
+    </div>
+    <div class="box">
+      <h3>Latest Designs</h3>
+      <p>Trendy collections updated every season.</p>
+    </div>
+    <div class="box">
+      <h3>Fast Delivery</h3>
+      <p>Quick and safe delivery across India.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Saritha Sarees | Designed with ❤️ for Indian Tradition</p>
+</footer>
+
+</body>
+</html>
